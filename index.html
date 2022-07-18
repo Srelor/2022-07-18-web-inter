@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2022-07-18 Webmaster intermediaire</title>
+    <!--
+        Commentaires en HTML
+        Ici on ajoute les appels lien CSS
+        et les scripts JS
+    -->
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+    <header>
+        <h1>2022-07-18 Webmaster intermediaire</h1>
+        
+    </header>
+    <nav>
+        <ul>
+            <li><a href="./">Accueil</a></li>
+            <li><a href="./article.html">Article</a></li>
+            <li><a href="./formulaire.html">Formulaire</a></li>
+            <li><a href="./css.html">CSS</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <article>
+                <header>
+                    <h2>Problèmes courants en CSS</h2>
+                </header>
+                <main>
+                    <p>
+                        Le calcul par défaut des tailles en CSS est content-box, 
+                        il est conseillé de le passer en border-box
+                    </p>
+                    <p>
+                        Les tailles calculées : si vous voulez utiliser 
+                        des cadratin (em), il est 
+                        plus sûr d'utiliser les cadratins racine (rem) 
+                        car il sont toujouts calculés
+                        par rapport au cadratin racine du user stylesheet 
+                        et non pas le cadratin calculé du conteneur
+                    </p>
+                    <h3>Les polices de caractère</h3>
+                    <p>
+                        On utilisera les propriétés @font-face pour déclarer en CSS une polices
+                        de caractère dont les fichiers (eot, svg, ttf, woff, woff2) sont 
+                        hébergés sur le site pour ne pas forcer l'utilsateur à télécharger et installer 
+                        des fichiers.
+                    </p>
+                </main>
+                <footer>
+                    <button>
+                        Lire plus
+                    </button>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2>HTML - CSS sur le texte</h2>
+                </header>
+                <main>
+                    <p>
+                        Il existe quelques balises pour changer 
+                        directement l'affichage du texte en HTML.
+                        Un texte en <b>gras</b>, qui n'a pas 
+                        d'incidence sur le SEO, un texte en <strong>gras</strong> 
+                        qui lui à de l'incidence sur le SEO.
+                    </p>
+                    <p>
+                        Il en est de même pour l'italique : <i>Italique à l'affichage</i>, 
+                        <em>Italique afficher avec une emphase sémantique</em>
+                    </p>
+                    <p>
+                        La balise font <font color="#f00" size="6" face="Times new roman">texte</font> n'est plus utilisée. 
+                        maintenant on utilise les balises de type inline comme le span <span class="rouge-gras">span associé à une classe</span>
+                    </p>
+                    <pre>
+Lorem ipsum dolor sit amet consectetur, 
+adipisicing elit. Fugit quas quos 
+numquam voluptatem ipsam ratione deserunt 
+impedit accusantium perferendis <br />
+temporibus eligendi consequuntur corporis 
+dolores minima voluptates enim deleniti, 
+doloribus vero.
+                    </pre>
+                    <p>
+                        <code>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi possimus pariatur qui minima aspernatur provident magni incidunt. Placeat sed et fugiat delectus praesentium. Libero non voluptatem ab, quidem sint soluta.
+                        </code>
+                    </p>
+                    <p>
+                        <code>
+                            &lt;body&gt;<br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;coucou<br />
+                            &lt;/body&gt;
+                        </code>
+                    </p>
+                </main>
+                <footer>
+                    <button>
+                        Lire plus
+                    </button>
+                </footer>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="./">Accueil</a></li>
+                    <li><a href="./article.html">Article</a></li>
+                    <li><a href="./formulaire.html">Formulaire</a></li>
+                    <li><a href="./css.html">CSS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
