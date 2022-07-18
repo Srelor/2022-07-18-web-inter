@@ -1,0 +1,11 @@
+body > header,
+body > nav,
+footer{
+    display: none;
+}
+
+body > main{
+    width: 17cm;
+    margin-left: auto;
+    margin-right: auto;
+}
