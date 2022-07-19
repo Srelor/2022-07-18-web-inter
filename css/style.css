@@ -87,10 +87,33 @@ body > nav{
     color: var(--liens-nav);
 }
 
-body > nav > ul > li > a{
+body > nav > ul{
+    list-style-type: none;
+    padding: 5px 0;
+    line-height: 2rem;
+}
+
+body > nav > ul > li > a,
+body > nav > ul > li > a:visited{
     color: var(--liens-nav);
+    display: block;
+    padding-left: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+body > nav > ul > li > a:hover,
+body > nav > ul > li > a:focus{
+    color: var(--bg-nav);
+    background-color: var(--liens-nav);
 }
 
 body > main{
     margin: 0 10px;
 }
+
+/*
+Styliser les boutons dans les footer des articles (taille, hover, focus, coins arrondis - mdn - background )
+
+*/

@@ -141,6 +141,55 @@ doloribus vero.
         <section>
             <article>
                 <header>
+                    <h2>Les pseudo classe</h2>
+                </header>
+                <main>
+                    <p>
+                        il s'agit de complément de sélecteurs css, qui permettent d'intervenir sélectionnantsur un élément précis en série contenu dans un conteneur, soit les énièmes éléments, 
+                        le premier "enfant", le derner, etc.
+                    </p>
+                    <p>
+                        en chaînant ces pseudo classes, il est possible de prévoir des comportement des 
+                        taille de différents éléments selon la largeur d'affichage et le nombre de ses éléments
+                    </p>
+                    <p>
+                        Ici, quand on affche 2 éléments par ligne, si le dernier est égal à un multiple de 2 
+                        plus 1, il prend 100% de la largeur
+                        <pre>
+body > main > section > article:last-child:nth-of-type(2n+1){
+    width: 100%;
+}
+                        </pre>
+                    </p>
+                    <p>
+                        Ici, quand on affche 3 éléments par ligne, si le dernier est égal à un multiple de 3 
+                        plus 1, il prend 100% de la largeur
+                        <pre>
+body > main > section > article:last-child:nth-of-type(3n+1){
+    width: 100%;
+}
+                        </pre>
+                    </p>
+                    <p>
+                        Ici, quand on affche 3 éléments par ligne, si le dernier est égal à un multiple de 3 
+                        plus 2, il prend 66% de la largeur
+                        <pre>
+body > main > section > article:last-child:nth-of-type(3n+2){
+    width: 66%;
+}   
+                        </pre>
+                    </p>
+                </main>
+                <footer>
+                    <button>
+                        Lire plus
+                    </button>
+                </footer>
+            </article>
+        </section>
+        <section>
+            <article>
+                <header>
                     <h2>Les images</h2>
                 </header>
                 <main>
@@ -173,11 +222,41 @@ doloribus vero.
                         <source src="./media/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
                     </video>
                     <h3>Les vidéos hébergées sur un site tier</h3>
+                    <p>
+                        Des sites tels que Youtube et dailymotion donne la possibilité 
+                        d'incruster leurs vidéos sur nos sites, en utilisant la balise iframe.
+                    </p>
+                    <p>
+                        L'iframe est une balise qui permet d'appeler une page 
+                        d'un autre site (ou du site actuel) dans un cadre délimité.
+                    </p>
+                    <p>
+                        Il faut toutefois que le site ciblé autorise les iframes
+                    </p>
+                    <iframe src="./documents/CRAM.pdf" width="100%" height="200"></iframe>
+                    <iframe src="./documents/texte.txt" width="100%" height="200"></iframe>
                     <figure class="videoIframe">
                         <iframe class="videoIframe" src="https://www.youtube.com/embed/nYRZrXGGLrY" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </figure>
                     <figure class="videoIframe">
                         <iframe class="videoIframe" src="https://www.dailymotion.com/embed/video/x1nofw" width="100%" height="100%" allowfullscreen ></iframe>
+                    </figure>
+                </main>
+                <footer>
+                    <button>
+                        Lire plus
+                    </button>
+                </footer>
+            </article>
+            <article>
+                <header>
+                    <h2>Le son hébergés sur le site</h2>
+                </header>
+                <main>
+                    <figure>
+                        <audio controls>
+                            <source src="./media/diablo_town.mp3" type="audio/mp3" />
+                        </audio>
                     </figure>
                 </main>
                 <footer>
