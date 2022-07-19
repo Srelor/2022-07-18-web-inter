@@ -20,7 +20,7 @@
     <nav>
         <ul>
             <li><a href="./">Accueil</a></li>
-            <li><a href="./article.html">Article</a></li>
+            <li><a href="./article.html" title="Lien vers un article du site">Article</a></li>
             <li><a href="./formulaire.html">Formulaire</a></li>
             <li><a href="./css.html">CSS</a></li>
         </ul>
@@ -145,12 +145,15 @@ doloribus vero.
                 </header>
                 <main>
                     <figure>
-                        <img src="./images/poster-twitch-synthwave.jpg" alt="Poster Twitch synthwave James White" />
+                        <img src="./images/poster-twitch-synthwave.jpg" 
+                        alt="Poster Twitch synthwave James White" 
+                        title="Poster Twitch synthwave James White"
+                        />
                         <figcaption>
                             Poster Twitch synthwave James White
                         </figcaption>
                     </figure>
-                    <img src="./images/skeletor-poster-masters-of-the-universe.jpg" alt="Skeletor" />
+                    <img src="./images/skeletor-poster-masters-of-the-universe.jpg" alt="Poster de skeletor les maîtres de l'univers par James White" />
                 </main>
                 <footer>
                     <button>
@@ -170,10 +173,12 @@ doloribus vero.
                         <source src="./media/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
                     </video>
                     <h3>Les vidéos hébergées sur un site tier</h3>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/nYRZrXGGLrY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-                        <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;overflow:hidden" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x1nofw" width="100%" height="100%" allowfullscreen ></iframe>
-                    </div>
+                    <figure class="videoIframe">
+                        <iframe class="videoIframe" src="https://www.youtube.com/embed/nYRZrXGGLrY" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </figure>
+                    <figure class="videoIframe">
+                        <iframe class="videoIframe" src="https://www.dailymotion.com/embed/video/x1nofw" width="100%" height="100%" allowfullscreen ></iframe>
+                    </figure>
                 </main>
                 <footer>
                     <button>

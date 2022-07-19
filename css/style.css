@@ -1,12 +1,18 @@
 @import url('./JMHArkham.css');
 
 /*
-    dimension web : 
-    px      => pixel
-    em      => cadratin  : se calcul par rapport au em du conteneur
-    %       => pourcentage : calculé selon la taille du conteneur
-    vw vh   => view width & view height
-    rem     => cadratin racine : se calcul par rapport à la racine du user stylesheet
+dimension les plus vues en web :
+px      =>  Pixel
+em      =>  cadratin : unité de mesure en print sur les presses
+            le cadratin se calcul par rapport à son parent
+rem     =>  cadratin racine : se calcul par rapport à la taille racine de police
+%       =>  pourcentage, se calcule par rapport à l'élément qui le contient
+vw & vh =>  viewport width & viewport height : correspond à la taille 
+            d'affichage de la page en largeur et en hauteur
+            si affichage en largeur 768px alors 20vw = 153.6 px
+
+si 2em = 32 px, 1em = 16px
+
 */
 
 :root{
@@ -24,6 +30,29 @@
     color: red;
     font-weight: bolder;
     font-size: 1.1rem;
+}
+
+/*
+un élément figure qui contient dans ses enfant un élément avec la classe videoIframe
+figure .video{
+}
+*/
+
+figure.videoIframe{ /*  un élément figure avec la classe videoIframe*/
+    position:relative;
+    padding-bottom:56.25%;
+    height:0;
+    overflow:hidden;
+    margin: 0;
+}
+
+.videoIframe{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:0px;
+    top:0px;
+    overflow:hidden;
 }
 
 h1, h2, h3, h4, h5, h6{
