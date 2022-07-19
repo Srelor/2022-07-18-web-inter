@@ -64,8 +64,27 @@ figure.videoIframe{ /*  un élément figure avec la classe videoIframe*/
     overflow:hidden;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1, h2:not(body > footer > div > h2), h3, h4, h5, h6{
     font-family: var(--font-heading);
+    margin: 0;
+}
+
+body > footer > div > h2{
+    margin: 0;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    color: var(--liens-nav);
+}
+
+body > footer > div > h2::before{
+    width: 0;
+    height: 0;
+    border-left: 1rem solid var(--liens-nav);
+    border-top: 0.45rem solid transparent;
+    border-bottom: 0.45rem solid transparent;
+    border-right: 0.35rem solid transparent;
+    content: "";
+    display: inline-block;
 }
 
 h1{
@@ -94,19 +113,27 @@ body > header{
     text-align: center;
 }
 
-body > nav{
+body > footer{
+    background-color: var(--bg-nav);
+}
+
+body > nav, 
+footer > div > nav{
     background-color: var(--bg-nav);
     color: var(--liens-nav);
 }
 
-body > nav > ul{
+body > nav > ul, 
+footer > div > nav > ul{
     list-style-type: none;
     padding: 5px 0;
     line-height: 2rem;
 }
 
 body > nav > ul > li > a,
-body > nav > ul > li > a:visited{
+body > nav > ul > li > a:visited, 
+footer > div > nav > ul > li > a, 
+footer > div > nav > ul > li > a:visited{
     color: var(--liens-nav);
     display: block;
     padding-left: 15px;
@@ -116,7 +143,9 @@ body > nav > ul > li > a:visited{
 }
 
 body > nav > ul > li > a:hover,
-body > nav > ul > li > a:focus{
+body > nav > ul > li > a:focus, 
+footer > div > nav > ul > li > a:hover, 
+footer > div > nav > ul > li > a:focus{
     color: var(--bg-nav);
     background-color: var(--liens-nav);
 }
@@ -126,6 +155,8 @@ body > main{
     width: var(--width-col-3-3);
     margin-left: auto;
     margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /*
@@ -158,6 +189,7 @@ body > main > section > article > footer button{
     margin-left: auto;
     margin-right: auto;
     display: block;
+    border: 1px var(--bg-header) solid;
 }
 
 body > main > section > article > footer button:hover{
@@ -169,15 +201,43 @@ body > main > section > article > footer button:hover{
 /* media queries adaptatif */
 
 @media (min-width: 576px){
-    body > main{
+    body > main,
+    body > nav > ul{
         max-width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    body > nav > ul{
+        padding: 0;
     }
 
     /* transformer la navigation verticale en navigation horizontale */
+
+    body > nav > ul{
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+    
+    body > nav > ul > li > a,
+    body > nav > ul > li > a:visited{    
+        padding-left: unset;
+        padding: 0 25px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    body > nav > ul > li > a.active{
+        border: 1px solid var(--liens-nav);
+        border-bottom: 0px;
+    }
+
+
 }
 
 @media (min-width: 768px){
-    body > main{
+    body > main,
+    body > nav > ul{
         max-width: 720px;
     }
 
@@ -198,13 +258,15 @@ body > main > section > article > footer button:hover{
 }
 
 @media (min-width: 992px){
-    body > main{
+    body > main,
+    body > nav > ul{
         max-width: 960px;
     }
 }
 
 @media (min-width: 1200px){
-    body > main{
+    body > main,
+    body > nav > ul{
         max-width: 1140px;
     }
 
@@ -223,13 +285,15 @@ body > main > section > article > footer button:hover{
 }
 
 @media (min-width: 1400px){
-    body > main{
+    body > main,
+    body > nav > ul{
         max-width: 1320px;
     }
 }
 
 @media (min-width: 1600px){
-    body > main{
+    body > main,
+    body > nav > ul{
         max-width: 1550px;
     }
 }
