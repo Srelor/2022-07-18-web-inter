@@ -172,6 +172,8 @@ body > main > section > article > footer button:hover{
     body > main{
         max-width: 540px;
     }
+
+    /* transformer la navigation verticale en navigation horizontale */
 }
 
 @media (min-width: 768px){
