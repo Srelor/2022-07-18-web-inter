@@ -41,6 +41,21 @@ si 2em = 32 px, 1em = 16px
     font-size: 1.1rem;
 }
 
+p.id-artist{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    line-height: 1.4rem;
+    background-color: var(--main-bg-color);
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px var(--bg-header);
+}
+
+p.id-artist span{
+    width: 50%;
+}
+
 /*
 un élément figure qui contient dans ses enfant un élément avec la classe videoIframe
 figure .video{
@@ -62,6 +77,12 @@ figure.videoIframe{ /*  un élément figure avec la classe videoIframe*/
     left:0px;
     top:0px;
     overflow:hidden;
+}
+
+.img-article-left{
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
 }
 
 h1, h2:not(body > footer > div > h2), h3, h4, h5, h6{
@@ -256,6 +277,15 @@ body > footer > div > ul > li > a{
 }
 
 @media (min-width: 768px){
+
+    .filmo{
+        columns: 2;
+    }
+
+    .img-article-left{
+        float: left;
+    }
+
     body > main,
     body > nav > ul{
         max-width: 720px;
@@ -282,9 +312,18 @@ body > footer > div > ul > li > a{
     body > nav > ul{
         max-width: 960px;
     }
+
+    .img-article-left{
+        max-width: 250px;
+    }
 }
 
 @media (min-width: 1200px){
+
+    .filmo{
+        columns: 3;
+    }
+
     body > main,
     body > nav > ul{
         max-width: 1140px;
