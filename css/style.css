@@ -79,11 +79,91 @@ figure.videoIframe{ /*  un élément figure avec la classe videoIframe*/
     overflow:hidden;
 }
 
-.img-article-left{
+.img-article-left,
+.img-article-right{
     display: flex;
     flex-direction: column;
     max-width: 200px;
 }
+
+/* Animation en CSS */
+
+.translation{
+    transition: transform .5s;
+}
+
+.translation:hover{
+    transform: translate(30px, -20px);
+}
+
+.scale{
+    transition: transform .1s;
+}
+
+.scale:hover{
+    background-color: aliceblue;
+    transform: scale(1.1);
+}
+
+.survol{
+    transition: transform 1s,
+                box-shadow 1s ease 2s,
+                border-radius 0.5s ease;
+
+}
+
+.survol:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 10px 20px #333;
+    border-radius: 10px;
+}
+
+.rectangle{
+    width: 200px;
+    height: 100px;
+    background-color: darkred;
+    opacity: 0.5;
+}
+
+/* 
+on déclare une animation sur un élément, 
+et plutôt que d'écrire une animation "simple" directement, 
+on déclare un jeu de @keyframes (images-clefs) qui vont 
+donner les différents états de l'élément sur la durée totale déclarée par animation
+*/
+.animation{
+    position: absolute;
+    animation: rectangleQuiBouge 3s infinite;
+    /*
+    on déclare le jeu de @keyframes nommé rectangleQuiBouge,
+    sa durée, 3secondes, et sa répétition, ici infinie.
+    */
+}
+
+@keyframes rectangleQuiBouge{
+    0%{
+        transform: rotate(0deg);
+        left: 20vw;
+    }
+    5%{
+        transform: rotate(45deg);
+        left: 20vw;
+    }
+    50%{
+        left: 70vw;
+        transform: rotate(-90deg);
+    }
+    60%{
+        left: 70vw;
+        transform: rotate(0deg);
+    }
+    100%{
+        left: 20vw;
+    }
+}
+
+
+/* Fin animation en CSS */
 
 h1, h2:not(body > footer > div > h2), h3, h4, h5, h6{
     font-family: var(--font-heading);
@@ -286,6 +366,10 @@ body > footer > div > ul > li > a{
         float: left;
     }
 
+    .img-article-right{
+        float: right;
+    }
+
     body > main,
     body > nav > ul{
         max-width: 720px;
@@ -313,7 +397,8 @@ body > footer > div > ul > li > a{
         max-width: 960px;
     }
 
-    .img-article-left{
+    .img-article-left,
+    .img-article-right{
         max-width: 250px;
     }
 }
