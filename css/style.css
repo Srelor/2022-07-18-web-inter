@@ -125,6 +125,38 @@ figure.videoIframe{ /*  un élément figure avec la classe videoIframe*/
     opacity: 0.5;
 }
 
+#tabExemple{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#tabExemple td,
+#tabExemple th{
+    border: 1px solid black;
+}
+
+#tabExemple th:first-of-type{
+    width: 10%;
+}
+
+#tabExemple tbody tr:nth-of-type(odd){
+    background-color: var(--bg-header);
+    color: var(--liens-nav);
+}
+
+#tabExemple td:hover{
+    background-color: var(--liens-nav);
+    color: var(--bg-header);
+}
+
+[data-type="head"]{
+    background-color: aqua;
+}
+
+[rowspan]{
+    font-weight: bolder;
+}
+
 /* 
 on déclare une animation sur un élément, 
 et plutôt que d'écrire une animation "simple" directement, 
